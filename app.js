@@ -7,7 +7,8 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const brandsRouter = require('./routes/brands');
-const  brandMediaRouter = require('./routes/brand-media');
+const brandMediaRouter = require('./routes/brand-media');
+const stuffRouter = require('./routes/stuffs');
 
 const app = express();
 
@@ -21,5 +22,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/brands', brandsRouter);
 app.use('/brand-media', brandMediaRouter);
+app.use('/stuffs', stuffRouter);
 
 module.exports = app;
